@@ -1,0 +1,14 @@
+<html>
+	<head>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'style.css' %}"/>
+		<title>{% block title%}My mini blog{% endblock %}</title>
+	</head>
+	<body>
+		<a href="/blog">Home</a> 
+		| <a href="user/add">Be member</a>
+		| <a href="user/login">Login</a>
+		<p/>
+		{% block body %} {% endblock %}
+	</body>
+</html>
