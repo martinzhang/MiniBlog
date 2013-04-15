@@ -6,10 +6,12 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('myblog.views',
     url(r'^$', 'index'),
-    url(r'^add', 'blog_add'),
+    url(r'^blog/add', 'blog_add'),
     )
 
 urlpatterns += patterns('myblog.views',
-    url(r'^user/add', 'user_add'),
-    url(r'^user/login', 'user_login'),                   
+    url(r'^user/$', 'user_list'),
+    url(r'^user/add/$', 'user_add'),
+    url(r'^user/login/$', 'user_login'),
+    url(r'^user/detail/(\d+)/$', 'user_detail'),              
     )
